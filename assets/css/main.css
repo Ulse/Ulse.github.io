@@ -213,12 +213,11 @@ input, select, textarea {
 	/* Set your background with this */
 
 		background: #5D84C2 url("images/bg.jpg") bottom left;
-		background-repeat: repeat-x;
-		animation: slideleft 600s infinite linear
+		background-repeat: no-repeat;
 		height: 50%;
 		left: 0;
 		opacity: 1;
-		position: absolute;
+		position: fixed;
 		top: 0;
 	}
 
