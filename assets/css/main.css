@@ -268,27 +268,31 @@ input, select, textarea {
 			transform: translate3d(-2250px,0,0);
 		}
 	}
+@keyframes bg {
+    0% {
+        transform: scale(1); /* Initial scale - no zoom */
+    }
+    100% {
+        transform: scale(1.2); /* Zoom in by 20% */
+    }
+}
 
-	@keyframes bg {
-		0% {
-			-moz-transform: translate3d(0,0,0);
-			-webkit-transform: translate3d(0,0,0);
-			-ms-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
-		}
+/* Targeting the #bg element */
+#bg {
+    background-size: 1200px 1600px; /* Adjust the background size as before */
+    width: 6750px; /* Width of the element */
+    animation: bg 10s ease-in-out infinite; /* 10s duration, ease-in-out timing, infinite loop */
+    will-change: transform; /* Optimize for performance */
+    overflow: hidden; /* Hide content that moves out of view */
+}
 
-		100% {
-			-moz-transform: translate3d(-2250px,0,0);
-			-webkit-transform: translate3d(-2250px,0,0);
-			-ms-transform: translate3d(-2250px,0,0);
-			transform: translate3d(-2250px,0,0);
-		}
-	}
-
-	#bg {
-		background-size: 1200px 1600;
-		width: 6750px;
-	}
+/* Optional - Adjusting body or parent container to handle large content */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling when the element moves */
+    background: #f0f0f0; /* Add a background color to the page for contrast */
+}
 
 /* Overlay */
 
